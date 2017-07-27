@@ -15,7 +15,7 @@
                         <label for="inputID"><h1>Login</h1></label>
                     </div>
                 </div>
-                <hr width="700" style="background-color:#222222; color:#222222; height:2px; border:none;" noshade/>
+                <hr width="700" style="background-color:#222223; color:#222222; height:2px; border:none;" noshade/>
                 <div style="padding-left:10px;" class="mydiv2">
                     <table>
                         <tr>
