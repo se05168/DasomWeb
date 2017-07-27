@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
         <meta charset="utf-8">
         <title>2017.07.24 HOMEPAGE</title>
-        <link href="../FRAME/css/bootstrap.min.css" rel="stylesheet">
-        <link href="../FRAME/css/myCss.css" rel="stylesheet">
     </head>
-    
+
     <body>
-        <div class="mydiv">
-            <div>
-                <div>
-                    <label for="inputID"><h1>Admin</h1></label>
-                </div>
-            </div>
-            <hr width="700" style="background-color:#222222; color:#222222; height:2px; border:none;" noshade/>
-            <div class="mydiv2" style="overflow-y:scroll; width:700px; height:550px;">
-                <table class="table">
+    	<div>
+	    	<table class="table">
                 <tr><th>이름</th><th>ID</th><th>승인여부</th></tr>
                 <?php
                     require "../DB/dbconfig.php";
@@ -42,8 +33,6 @@
                     }
                 ?>
                 </table>
-            </div>
-            <a style="margin-top:15px;" class="btn btn-default" href="../index.php" role="button">back</a>
-        </div>
+    	</div>
     </body>
 </html>

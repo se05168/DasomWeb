@@ -2,38 +2,43 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>회원가입</title>
+        <title>2017.07.24 HOMEPAGE</title>
         <link href="../FRAME/css/bootstrap.min.css" rel="stylesheet">
         <link href="../FRAME/css/myCss.css" rel="stylesheet">
     </head>
-
+    
     <body>
         <div class="mydiv">
-            <form class="form-inline" action="../index.php" method="POST">
+            <div>
                 <div>
-                    <div>
-                        <label for="inputName"><h1>Sign Up</h1></label>
-                    </div>
+                    <label for="inputID"><h1>실시간 급상승 검색어</h1></label>
                 </div>
-                <hr width="700" style="background-color:#222222; color:#222222; height:2px; border:none;" noshade/>
-                <div class="mydiv2">
-                    <table>
-                        <tr>
-                            <td><h1>로그인에 성공했습니다.</h1></td>
-                            <!-- <td><label for="inputName" style="text-align:right;width:100px;">name</label></td>
-                            <td><input type="text" maxlength="20" style="margin-left:20px;width:400px;" class="form-control" id="inputName" name="userName" placeholder="name" autofocus required></td> -->
-                        </tr>
-                        <tr>
-                            <td><h1>뒤로가시려면 버튼을 눌러주세요.</h1></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button type="submit" class="btn btn-default">back</button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </form>
+            </div>
+            <hr width="700" style="background-color:#222222; color:#222222; height:2px; border:none;" noshade/>
+            <div class="mydiv2" style="overflow-y:scroll; width:700px; height:550px;">
+                <table class="table">
+                <?php
+                    require "../DB/dbconfig.php";
+                    if (!$db) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+                    $sql = "SELECT * FROM ranking";
+                    $result = mysqli_query($db, $sql);
+                    if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>
+                            <td>".$row["num"]."</td>
+                            <td>".$row["con"]."</td>
+                            </tr>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+                ?>
+                </table>
+            </div>
+            <a style="margin-top:15px;" class="btn btn-default" href="../index.php" role="button">back</a>
         </div>
     </body>
 </html>
