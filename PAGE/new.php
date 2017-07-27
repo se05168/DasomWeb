@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<html lang="ko">
         <meta charset="utf-8">
         <title>회원가입</title>
         <link href="../FRAME/css/bootstrap.min.css" rel="stylesheet">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
     <head>
         <meta charset="utf-8">
         <title>2017.07.24 HOMEPAGE</title>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <hr width="700" style="background-color:#222222; color:#222222; height:2px; border:none;" noshade/>
-            <div class="mydiv2" style="overflow-y:scroll; width:700px; height:550px;">
+            <div class="mydiv2" style=" padding-top:0px; padding-bottom:0px; overflow-y:scroll; width:700px; height:550px;">
                 <table class="table">
                 <?php
                     require "../DB/dbconfig.php";
@@ -28,8 +28,8 @@
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
                             echo "<tr>
-                            <td>".$row["num"]."</td>
-                            <td>".$row["con"]."</td>
+                            <td style='font-size:1.1em;vertical-align:middle;width:300px;'>".$row["num"]."위</td>
+                            <td style='font-size:1.1em;vertical-align:middle;'>".$row["con"]."</td>
                             </tr>";
                         }
                     } else {
