@@ -5,7 +5,7 @@
 
     mysqli_set_charset($db, 'utf8');
 
-    $userid=$_GET[userid];	// ID
+    $userid=$_GET['userid'];	// ID
 
     $sql = "SELECT * FROM user WHERE ID='$userid'";
 
